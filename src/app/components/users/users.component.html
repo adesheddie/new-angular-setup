@@ -1,9 +1,12 @@
-<div class="container">
+
     <ul>
-        <li *ngFor="let user of UsersList;index as i">
+        <li *ngFor="let user of users;index as i">
             <span>{{user.employee_name}}</span>
             <span>{{user.employee_salary}}</span>
             <span>{{user.employee_age}}</span>
+            <button (click)="selectUser.emit(user)">Select</button>
+            <button (click)="selectUser2.emit(user)">Select2</button>
+            <!-- <button (click)="testClick('hola')">Select</button> -->
+            
         </li>
     </ul>
-</div>

@@ -7,14 +7,16 @@ import { UsersComponent } from './components/users/users.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ContainerComponent } from './components/container/container.component';
 
 const appRoutes=[
-  {path:'users',component:UsersComponent}
+  {path:'users',component:ContainerComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,

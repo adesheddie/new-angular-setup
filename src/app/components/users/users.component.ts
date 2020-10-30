@@ -1,37 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/services/users.service';
-import { Users } from 'src/app/users';
+import { ChangeDetectionStrategy, Component, Input, OnInit, Output,EventEmitter  } from '@angular/core';
+
 
 @Component({
-  selector: 'app-users',
+  selector: 'usersList',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  styleUrls: ['./users.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UsersComponent implements OnInit {
-  public UsersList: Users[] = [];
-  constructor(private usersService: UsersService) {
+  @Input() users;
+    @Output() selectUser = new EventEmitter();
+    @Output() selectUser2 = new EventEmitter();
+  constructor() {
 
-    this.getUsers();
+
   }
 
   ngOnInit() {
   }
 
-  getUsers() {
-    this.usersService.getUsersService().subscribe((res) => {
-      console.log('res');
-      console.log(res)
-      if (!res) {
-        // handle error
-        console.log('error occured in COMPONENT')
-      }
-      else {
-        this.UsersList = res.body['data'];
-        console.log('this.UsersList');
-        console.log(this.UsersList);
-      }
-    })
-
-  }
 
 }
