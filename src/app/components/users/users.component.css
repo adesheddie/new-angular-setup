@@ -1,0 +1,30 @@
+.select-button{
+    padding:5px 20px;
+    margin:0px 10px;
+}
+.select2-button{
+    padding:5px 20px;
+    margin:0px 10px;
+}
+.post-button{
+    padding:5px 20px;
+    margin:0px 10px;
+}
+
+
+.name{
+margin-right: 20px;
+}
+.salary{
+    margin-right: 20px;
+}
+.age{
+    margin-right: 20px;
+}
+.info{
+    display: inline-block;
+    width: 10%;
+}
+.buttons-grp{
+    display: inline-block;
+}

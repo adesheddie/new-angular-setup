@@ -46,4 +46,20 @@ export class ContainerComponent implements OnInit {
     console.log('selectUser2 called');
     console.log(target);
   }
+
+  // post request dummy
+  postRequestFunc(obj){
+    console.log('obj');
+    console.log(obj);
+    this.usersService.saveUser(obj).subscribe((res)=>{
+      if(!res){
+        console.log('error')
+    }
+    else{
+      // success
+      console.log('res.body');
+      console.log(res.body);
+    }
+    })
+  }
 }

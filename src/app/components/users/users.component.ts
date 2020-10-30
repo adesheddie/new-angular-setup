@@ -11,6 +11,7 @@ export class UsersComponent implements OnInit {
   @Input() users;
     @Output() selectUser = new EventEmitter();
     @Output() selectUser2 = new EventEmitter();
+    @Output() postRequest = new EventEmitter();
   constructor() {
 
 

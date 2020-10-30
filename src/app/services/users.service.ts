@@ -38,4 +38,21 @@ export class UsersService {
         })
       );
   }
+  saveUser(obj: Users): Observable<any> {
+    const httpOptions = {
+       headers: new HttpHeaders({
+         // 'Content-Type': 'application/json',
+         // 'AuthToken':'Testing'
+       }),
+       observe: 'response' as const
+     };
+     return this.http.post<Users>('http://localhost:3000/register/'+ 'test-api', obj, httpOptions).pipe(
+       catchError(error => {
+         console.log('error');
+         console.log(error);
+         return of(0);
+       })
+     )
+   }
+ 
 }
