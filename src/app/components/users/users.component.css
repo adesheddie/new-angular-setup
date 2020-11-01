@@ -23,8 +23,11 @@ margin-right: 20px;
 }
 .info{
     display: inline-block;
-    width: 10%;
+    width: 30%;
+    min-width: 30%;
+    margin: auto;
 }
 .buttons-grp{
     display: inline-block;
+    width: 30%;
 }

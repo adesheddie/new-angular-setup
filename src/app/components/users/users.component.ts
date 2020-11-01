@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit, Output,EventEmitter 
 })
 export class UsersComponent implements OnInit {
   @Input() users;
+  @Input() usersStoreList;
     @Output() selectUser = new EventEmitter();
     @Output() selectUser2 = new EventEmitter();
     @Output() postRequest = new EventEmitter();

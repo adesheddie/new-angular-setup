@@ -8,7 +8,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ContainerComponent } from './components/container/container.component';
-
+import { StoreModule } from '@ngrx/store';
+import { UserReducer} from './assets/reducers/users.reducer';
 const appRoutes=[
   {path:'users',component:ContainerComponent}
 ]
@@ -20,7 +21,7 @@ const appRoutes=[
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,FormsModule,RouterModule.forRoot(appRoutes),ReactiveFormsModule
+    AppRoutingModule,HttpClientModule,FormsModule,RouterModule.forRoot(appRoutes),ReactiveFormsModule, StoreModule.forRoot({usersStore:UserReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
