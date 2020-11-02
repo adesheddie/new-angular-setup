@@ -10,14 +10,19 @@ import { RouterModule } from '@angular/router';
 import { ContainerComponent } from './components/container/container.component';
 import { StoreModule } from '@ngrx/store';
 import { UserReducer} from './assets/reducers/users.reducer';
+import { HomeComponent } from './components/home/home.component';
+import { HomeInnerComponent } from './components/home-inner/home-inner.component';
 const appRoutes=[
-  {path:'users',component:ContainerComponent}
+  {path:'users',component:ContainerComponent},
+  {path:'home',component:HomeComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    ContainerComponent
+    ContainerComponent,
+    HomeComponent,
+    HomeInnerComponent
   ],
   imports: [
     BrowserModule,
